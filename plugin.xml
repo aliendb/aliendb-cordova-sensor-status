@@ -39,7 +39,7 @@
             <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
         </config-file>
 
-        <source-file src="src/android/Diagnostic.java" target-dir="com/aliendb/diagnostic" />
+        <source-file src="src/android/Diagnostic.java" target-dir="src/aliendb/cordova/plugins/diagnostic" />
 
     </platform>
 </plugin>
