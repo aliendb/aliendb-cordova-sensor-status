@@ -1,0 +1,31 @@
+{
+    "version": "1.0.1",
+    "name": "aliendb-cordova-sensor-status",
+    "cordova_name": "Diagnostic",
+    "description": "Cordova/Phonegap plugin to check the state of Location/WiFi/Camera",
+    "author": "",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": ""
+    },
+    "issue": "",
+    "cordova": {
+        "id": "aliendb-cordova-sensor-status",
+        "platforms": [
+            "android",
+            "ios" 
+        ]
+    },
+    "keywords": [
+    ],
+    "engines": {
+        "cordovaDependencies": {
+            "4.0.0": {
+                "cordova-ios": ">=4.3.0",
+                "cordova-android": ">=6.3.0",
+                "cordova": ">=7.1.0"
+            }
+        }
+    }
+}
