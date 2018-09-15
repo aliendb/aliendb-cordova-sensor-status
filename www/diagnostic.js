@@ -104,6 +104,12 @@ Diagnostic.prototype.isCameraEnabled = function(successCallback, errorCallback) 
 						[]);
 };
 
+
+Diagnostic.prototype.ping = function() {
+	return 'ping';
+};
+
+
 module.exports = new Diagnostic();
 
 // cordova.addConstructor(function() {
