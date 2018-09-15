@@ -16,6 +16,7 @@
         <config-file target="config.xml" parent="/*">
             <feature name="Diagnostic">
                 <param name="ios-package" value="Diagnostic" />
+                <param name="onload" value="true" />
             </feature>
         </config-file>
 
@@ -30,6 +31,7 @@
         <config-file target="config.xml" parent="/*">
             <feature name="Diagnostic" >
                 <param name="android-package" value="aliendb.cordova.plugins.diagnostic.Diagnostic"/>
+                <param name="onload" value="true" />
             </feature>
         </config-file>
 
