@@ -77,7 +77,14 @@ public class Diagnostic extends CordovaPlugin {
         } else if(action.equals("isLocationEnabled") || action.equals("isLocationAuthorized") || action.equals("isLocationEnabledSetting")) {
             // r.put("success", isGpsEnabled());
             // r.put("success", isGpsEnabled() || isNetworkEnabled());
-            callbackContext.success(isGpsEnabled() ? 1 : 0);
+            // callbackContext.success(isGpsEnabled() ? 1 : 0);
+                cordova.getThreadPool().execute(new Runnable() {
+                   public void run() {
+                       boolean result = isLocationProviderEnabled(LocationManager.GPS_PROVIDER);
+                       callbackContext.success(result); // Thread-safe.
+                   }
+               });
+               return true;
         } else if(action.equals("isWifiEnabled")) {
             // r.put("success", isWifiEnabled());
             callbackContext.success(isWifiEnabled() ? 1 : 0);
