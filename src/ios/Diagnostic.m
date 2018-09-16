@@ -14,6 +14,7 @@
 
 @implementation Diagnostic
 
+@property (nonatomic, strong) CLLocationManager *locationManager;
 
 - (void) isLocationEnabled: (CDVInvokedUrlCommand*)command
 {
