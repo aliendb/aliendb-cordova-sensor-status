@@ -190,7 +190,7 @@
 
 
 //quick insert for gps
- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.locationManager = [[CLLocationManager alloc] init];
     self.locationManager.delegate = self;
     
