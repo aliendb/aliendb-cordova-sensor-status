@@ -14,7 +14,6 @@
 
 @implementation Diagnostic
 
-@property (nonatomic, strong) CLLocationManager *locationManager;
 
 - (void) isLocationEnabled: (CDVInvokedUrlCommand*)command
 {
@@ -188,29 +187,6 @@
     }
 
 }
-
-
-//quick insert for gps
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    self.locationManager = [[CLLocationManager alloc] init];
-    self.locationManager.delegate = self;
-    
-    if([self.locationManager authorizationStatus] == kCLAuthorizationStatusAuthorizedAlways) {
-        [self.appManager.locationManager startMonitoringSignificantLocationChanges];
-    } else {
-        [self.locationManager requestAlwaysAuthorization];	
-    }
-}
-
-- (void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status; {
-    if (status == kCLAuthorizationStatusAuthorizedAlways) {
-        [self.locationManager startMonitoringSignificantLocationChanges];
-    }
-}
-
-//- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations; {
-//    [[SCLFlicManager sharedManager] onLocationChange];
-//}
 
 
 
